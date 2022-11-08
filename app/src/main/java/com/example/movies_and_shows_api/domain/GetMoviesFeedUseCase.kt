@@ -3,9 +3,7 @@ package com.example.movies_and_shows_api.domain
 class GetMoviesFeedUseCase (
 
     private val MovieRepository: MovieRepository = TODO()
-
-
-) {
+){
 
     fun execute(): List<MovieFeed> {
         val movies = MovieRepository.getMovie()
