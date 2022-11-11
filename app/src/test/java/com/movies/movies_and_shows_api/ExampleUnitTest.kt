@@ -1,4 +1,4 @@
-package com.example.movies_and_shows_api
+package com.movies.movies_and_shows_api
 
 import org.junit.Test
 

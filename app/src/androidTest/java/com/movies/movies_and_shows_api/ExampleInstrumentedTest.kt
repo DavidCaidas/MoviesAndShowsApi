@@ -1,4 +1,4 @@
-package com.example.movies_and_shows_api
+package com.movies.movies_and_shows_api
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
