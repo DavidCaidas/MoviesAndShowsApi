@@ -1,4 +1,4 @@
-package com.example.movies_and_shows_api.data.remote.api
+package com.movies.movies_and_shows_api.data.remote.api
 
 
 data class moviesApiModel(

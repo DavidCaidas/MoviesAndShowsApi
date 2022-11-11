@@ -1,6 +1,6 @@
-package com.iesam.superhero.data
+package com.movies.movies_and_shows_api.data
 
-import com.example.movies_and_shows_api.data.remote.api.moviesApiModel
+import com.movies.movies_and_shows_api.data.remote.api.moviesApiModel
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -24,7 +24,7 @@ class ApiClient {
     fun buildApiEndPoints() = createRetrofitClient().create(ApiServices::class.java)
 
     fun getmovies(): List<moviesApiModel> {
-        val movies = apiServices.getmoviesFeed()
+        val movies = apiServices.getMoviesFeed()
         val response = movies.execute()
         if (response.isSuccessful) {
             return response.body() ?: emptyList()
@@ -33,7 +33,7 @@ class ApiClient {
     }
 
     fun getmovie(movieId: String): moviesApiModel? {
-        val call = apiServices.getmovie(movieId).execute()
+        val call = apiServices.getMovie(movieId).execute()
         return call.body()
     }
 
