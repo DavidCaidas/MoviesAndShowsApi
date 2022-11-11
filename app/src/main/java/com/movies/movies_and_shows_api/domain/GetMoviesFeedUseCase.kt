@@ -1,4 +1,4 @@
-package com.example.movies_and_shows_api.domain
+package com.movies.movies_and_shows_api.domain
 
 class GetMoviesFeedUseCase (
 
@@ -8,16 +8,16 @@ class GetMoviesFeedUseCase (
     fun execute(): List<MovieFeed> {
         val movies = MovieRepository.getMovie()
 
-        val list = movies.map { movie ->
+        val list = movies.map { Movie ->
 
             MovieFeed(
-                movie.id,
-                movie.title,
-                movie.plot,
-                movie.genre,
-                movie.rating,
-                movie.year,
-                movie.Poster
+                Movie.id,
+                Movie.title,
+                Movie.plot,
+                Movie.genre,
+                Movie.rating,
+                Movie.year,
+                Movie.poster
             )
         }
 
@@ -31,6 +31,6 @@ class GetMoviesFeedUseCase (
         val genre:String,
         val rating:String,
         val year:String,
-        val Poster:String
+        val poster:String
     )
 }
