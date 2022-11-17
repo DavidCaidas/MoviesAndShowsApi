@@ -4,9 +4,9 @@ class GetMovieDetailUseCase(
     private val movieRepository: MovieRepository,
 ) {
 
-    fun execute(movieId: String): movieDetail {
+    fun execute(movieId: String): MovieDetail {
         val Movie = movieRepository.getMovieById(movieId)!!
-        return movieDetail(
+        return MovieDetail(
 
             Movie.id,
             Movie.title,
@@ -18,7 +18,7 @@ class GetMovieDetailUseCase(
         )
     }
 
-    data class movieDetail(
+    data class MovieDetail(
 
         val id: String,
         val title: String,
