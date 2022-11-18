@@ -1,0 +1,57 @@
+package com.movies.movies_and_shows_api.presentation
+
+import android.content.Context
+import android.content.SharedPreferences
+import com.movies.movies_and_shows_api.data.ApiClient
+import com.movies.movies_and_shows_api.data.MoviesDataRepository
+import com.movies.movies_and_shows_api.data.local.xml.MoviesXmlLocalDataSource
+import com.movies.movies_and_shows_api.data.remote.api.MoviesApiRemoteDataSource
+import com.movies.movies_and_shows_api.domain.GetMoviesFeedUseCase
+import com.movies.movies_and_shows_api.domain.MovieRepository
+
+/*
+class MovieFactory {
+
+   private fun getApiClient() = ApiClient()
+   private fun getSharedPreferences(
+       context: Context,
+       nameSharedPreferences: String
+   ): SharedPreferences {
+       return context.getSharedPreferences(nameSharedPreferences, Context.MODE_PRIVATE)
+   }
+
+
+   // --------------------------------FEED-----------------------------------
+   fun getMoviesViewModel(applicationContext: Context) : MoviesFeedViewMdel {
+       return MoviesFeedViewMdel(getMovieFeedUseCase(applicationContext))
+   }
+
+   private fun getMovieFeedUseCase(context: Context): GetMoviesFeedUseCase {
+       return GetMoviesFeedUseCase(
+           getMovieRepository(context)
+       )
+   }
+   // -------------------------------------------------------------------
+   // --------------------------------DETAIL-----------------------------------
+   fun getMoviesDetailViewModel(applicationContext: Context) : MovieDetailViewModel {
+       return MovieDetailViewModel(getMovieDetailUseCase(applicationContext))
+   }
+   private fun getMovieDetailUseCase(context: Context): GetMovieDetailUseCase {
+       return GetMovieDetailUseCase(getMovieRepository(context))
+   }
+   // -------------------------------------------------------------------
+   private fun getMovieRepository(context: Context): MovieRepository {
+       return MovieDataRepository(
+           // Cambiar LocalSource a ROOM DB cuando esté correctamente mergeado
+           MovieXmlLocalDataSource(
+               //getSharedPreferences(context, "moviesSharedPreferences")
+               context.getSharedPreferences("movies", Context.MODE_PRIVATE)
+           ),
+           //MovieApiRemoteDataSource(getApiClient())
+           MovieApiRemoteDataSource(
+               ApiClient()
+           )
+       )
+   }
+}
+*/

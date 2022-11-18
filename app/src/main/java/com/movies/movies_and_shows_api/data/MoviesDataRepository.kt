@@ -1,7 +1,8 @@
 package com.movies.movies_and_shows_api.data
 
-import com.movies.movies_and_shows_api.data.remote.MoviesRemoteDataSource
 import com.movies.movies_and_shows_api.data.local.MoviesLocalDataSource
+import com.movies.movies_and_shows_api.data.local.xml.MoviesXmlLocalDataSource
+import com.movies.movies_and_shows_api.data.remote.MoviesRemoteDataSource
 import com.movies.movies_and_shows_api.domain.Movie
 import com.movies.movies_and_shows_api.domain.MovieRepository
 
