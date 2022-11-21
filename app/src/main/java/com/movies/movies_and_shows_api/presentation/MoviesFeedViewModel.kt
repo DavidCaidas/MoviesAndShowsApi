@@ -7,15 +7,13 @@ import com.movies.movies_and_shows_api.domain.GetMoviesFeedUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MoviesFeedViewMdel (val getMoviesFeedUseCase: GetMoviesFeedUseCase) : ViewModel(){
+class MoviesFeedViewModel (private val getMoviesFeedUseCase: GetMoviesFeedUseCase) : ViewModel(){
 
-    //Publisher
-    val moviesFeedPublisher: MutableLiveData<MoviesUiState> by lazy {
+    val moviesFeedPublisher:MutableLiveData<MoviesUiState> by lazy{
         MutableLiveData<MoviesUiState>()
     }
 
-
-    fun loadMovies() {
+    fun loadMovies(){
         moviesFeedPublisher.value = MoviesUiState(true)
 
         viewModelScope.launch(Dispatchers.IO) {
@@ -23,22 +21,15 @@ class MoviesFeedViewMdel (val getMoviesFeedUseCase: GetMoviesFeedUseCase) : View
             moviesFeedPublisher.postValue(
                 MoviesUiState(
                     isLoading = false,
-                    moviesFeedUseCase = moviesFeedList
+                    moviesFeed = moviesFeedList
                 )
             )
         }
     }
 
-
     data class MoviesUiState(
-        val isLoading: Boolean = false,
-        val moviesFeedUseCase: List<GetMoviesFeedUseCase.MovieFeed> = emptyList()
+        val isLoading:Boolean = false,
+        val moviesFeed: List<GetMoviesFeedUseCase.MovieFeed> = emptyList()
     )
-
-
-
-
-
-
 
 }
