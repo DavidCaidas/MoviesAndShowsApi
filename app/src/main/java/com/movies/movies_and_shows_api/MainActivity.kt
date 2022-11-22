@@ -12,14 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupBinding()
-        /*
-        //<!-- TEST -> BORRAR DESPUES -->
-        thread {
-            startActivity(Intent(this, MovieDetailFragment::class.java))
-        }
-        //<!-- TEST -->
-         */
     }
 
     private fun setupBinding() {

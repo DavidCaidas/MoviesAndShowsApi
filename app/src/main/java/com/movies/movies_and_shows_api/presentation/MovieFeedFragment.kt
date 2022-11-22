@@ -1,6 +1,8 @@
 package com.movies.movies_and_shows_api.presentation
 
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,15 +12,19 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movies_and_shows_api.databinding.FragmentMoviesFeedBinding
+import com.movies.movies_and_shows_api.commons.KSerializer
 import com.movies.movies_and_shows_api.presentation.adapter.MovieAdapter
 
-class MovieFeedFragment: Fragment() {
 
+
+
+class MovieFeedFragment: Fragment() {
 
     private var binding: FragmentMoviesFeedBinding? = null
     private val movieAdapter = MovieAdapter()
     private val viewModel by lazy {
         MovieFactory().getMoviesFeedViewModel(requireContext())
+
     }
 
     override fun onCreateView(
@@ -39,9 +45,10 @@ class MovieFeedFragment: Fragment() {
         viewModel.loadMovies()
     }
 
+
     private fun setupView() {
         binding?.apply {
-            listMovies.apply {
+            feedListRecyclerView.apply {
                 adapter = movieAdapter
                 layoutManager =
                     LinearLayoutManager(
@@ -49,23 +56,22 @@ class MovieFeedFragment: Fragment() {
                         LinearLayoutManager.VERTICAL,
                         false
                     )
-                movieAdapter.setItemClick {
-                    navigateToDetail(it.toString())
-                }
             }
+
         }
     }
 
-    private fun setupObservers(){
-        val movieFeedState = Observer<MoviesFeedViewModel.MovieFeedState> {
-            movieAdapter.setDataItems(it.moviesFeed)
-        }
-        viewModel.movieFeedData.observe(viewLifecycleOwner, movieFeedState)
+    private fun setupObservers() {
+        val moviesFeedSuscriber =
+            Observer<MoviesFeedViewModel.MoviesUiState> { uiState ->
+                movieAdapter.setDataItems(uiState.moviesFeed)
+            }
+        viewModel.moviesFeedPublisher.observe(viewLifecycleOwner, moviesFeedSuscriber)
     }
-
+/*
     private fun navigateToDetail(movieId: String) {
         findNavController().navigate(MovieFeedFragmentDirections.actionMovieFeedToMovieDetail(movieId))
     }
-
+*/
 
 }

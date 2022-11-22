@@ -20,7 +20,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieViewHolder>() {
     fun setDataItems(movies: List<GetMoviesFeedUseCase.MovieFeed>) {
         dataItems.clear()
         dataItems.addAll(movies)
-        notifyDataSetChanged()
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {

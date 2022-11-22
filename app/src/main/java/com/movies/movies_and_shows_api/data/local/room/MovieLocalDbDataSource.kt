@@ -13,8 +13,8 @@ class MovieDbLocalDataSource (private val daoMoviesDao: MoviesDao):MoviesLocalDa
         }
     }
 
-    override fun getMovieById(MovieId: String): Movie? {
-        return daoMoviesDao.findMovieById(MovieId)?.toDomain()
+    override fun getMovieById(id: String): Movie? {
+        return daoMoviesDao.findMovieById(id)?.toDomain()
     }
 
     override fun save(list: List<Movie>) {
