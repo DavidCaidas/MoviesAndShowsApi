@@ -8,3 +8,4 @@ interface MoviesRemoteDataSource {
     fun getMovies(): List<Movie>
     fun getMovie(movieId: String): Movie?
 }
+
