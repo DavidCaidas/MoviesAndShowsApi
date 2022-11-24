@@ -5,16 +5,16 @@ import com.movies.movies_and_shows_api.data.remote.MoviesRemoteDataSource
 import com.movies.movies_and_shows_api.domain.Movie
 import com.movies.movies_and_shows_api.data.ApiClient
 
-class moviesApiRemoteDataSource(val apiClient: ApiClient) : MoviesRemoteDataSource {
+class MoviesApiRemoteDataSource(val apiClient: ApiClient) : MoviesRemoteDataSource {
 
     override fun getMovies(): List<Movie> {
-        val movies = apiClient.getmovies()
+        val movies = apiClient.getMovies()
         return movies.map {
             it.toDomain()
         }
     }
 
     override fun getMovie(movieId: String): Movie? {
-        return apiClient.getmovie(movieId)?.toDomain()
+        return apiClient.getMovie(movieId)?.toDomain()
     }
 }

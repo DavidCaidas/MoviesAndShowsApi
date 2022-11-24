@@ -1,8 +1,6 @@
-package com.movies.movies_and_shows_api.data.remote.api
+package com.movies.movies_and_shows_api.domain
 
-
-
-data class MoviesApiModel(
+data class Movie(
     val id: String,
     val title: String,
     val plot: String,
@@ -11,3 +9,4 @@ data class MoviesApiModel(
     val year: String,
     val poster: String
 )
+
