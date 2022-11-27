@@ -8,8 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiClient {
 
+    private val baseEndPoints: String = "https://movies-and-shows-api.cyclic.app/"
 
-    private val baseEndPoints: String = "https://movies-and-shows-api.cyclic.app/movies"
 
 
     private val apiServices: ApiServices
