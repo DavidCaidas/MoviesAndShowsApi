@@ -7,9 +7,8 @@
 
     <fragment
         android:id="@+id/movieFeed"
+        android:name="com.movies.movies_and_shows_api.presentation.MovieFeedFragment"
         tools:layout="@layout/fragment_movies_feed">
-
-
         <action
             android:id="@+id/action_movieFeed_to_movieDetail"
             app:destination="@id/movieDetail" />
@@ -18,22 +17,16 @@
     </fragment>
 
 
-
-
     <fragment
         android:id="@+id/movieDetail"
         android:name="com.movies.movies_and_shows_api.presentation.adapter.MovieDetailFragment"
         tools:layout="@layout/fragment_movies_detail">
-
         <argument
             android:name="movieId"
             app:argType="string"
-            app:nullable="true">
-
-        </argument>
+            app:nullable="true" />
 
     </fragment>
--->
 
 
 </navigation>

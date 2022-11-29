@@ -56,6 +56,11 @@ class MovieFeedFragment: Fragment() {
                         LinearLayoutManager.VERTICAL,
                         false
                     )
+/*
+                MovieAdapter.setItemClick {
+                    navigateToMovieDetail(it)
+                }
+                */
             }
 
         }
@@ -68,10 +73,8 @@ class MovieFeedFragment: Fragment() {
             }
         viewModel.moviesFeedPublisher.observe(viewLifecycleOwner, moviesFeedSuscriber)
     }
-/*
+
     private fun navigateToDetail(movieId: String) {
         findNavController().navigate(MovieFeedFragmentDirections.actionMovieFeedToMovieDetail(movieId))
     }
-*/
-
 }
