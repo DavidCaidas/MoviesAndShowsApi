@@ -9,7 +9,7 @@ class MemoryDataStore<T> {
 
     fun getById(id: String) = dataStore[id]
 
-    fun getAll():List<T>{
+    fun getAll(): List<T> {
         var list = mutableListOf<T>()
         dataStore.forEach {
             list.add(it.value)

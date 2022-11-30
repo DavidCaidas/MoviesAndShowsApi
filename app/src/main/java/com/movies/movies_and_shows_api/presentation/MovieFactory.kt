@@ -7,7 +7,6 @@ import com.movies.movies_and_shows_api.data.local.room.MovieDbLocalDataSource
 import com.movies.movies_and_shows_api.data.remote.api.MoviesApiRemoteDataSource
 import com.movies.movies_and_shows_api.domain.GetMovieDetailUseCase
 import com.movies.movies_and_shows_api.domain.GetMoviesFeedUseCase
-import com.movies.movies_and_shows_api.presentation.adapter.MoviesDetailViewModel
 import com.movies.movies_and_shows_api.roomDb.AppDatabase
 
 

@@ -17,7 +17,7 @@ abstract class AppDatabase : RoomDatabase() {
             if (INSTANCE == null) {
                 synchronized(this) {
                     INSTANCE =
-                        Room.databaseBuilder(context,AppDatabase::class.java, "movies-room-db")
+                        Room.databaseBuilder(context, AppDatabase::class.java, "movies-room-db")
                             .build()
                 }
             }

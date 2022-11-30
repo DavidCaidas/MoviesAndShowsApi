@@ -13,7 +13,7 @@ class MoviesDataRepository(
 
     override fun getMovie(): List<Movie> {
         var movies = localSource.getAllMovies()
-        if(movies.isNullOrEmpty()){
+        if (movies.isNullOrEmpty()) {
             movies = remoteSource.getMovies()
             localSource.save(movies)
             return movies
@@ -23,7 +23,7 @@ class MoviesDataRepository(
 
     override fun getMovieById(movieId: String): Movie? {
         var movie = localSource.getMovieById(movieId)
-        if(movie == null){
+        if (movie == null) {
             movie = remoteSource.getMovie(movieId)
             return movie
         }

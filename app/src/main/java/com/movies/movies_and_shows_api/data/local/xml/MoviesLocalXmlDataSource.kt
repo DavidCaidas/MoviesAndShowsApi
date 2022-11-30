@@ -5,7 +5,9 @@ import com.movies.movies_and_shows_api.commons.KSerializer
 import com.movies.movies_and_shows_api.data.local.MoviesLocalDataSource
 import com.movies.movies_and_shows_api.domain.Movie
 
-class MoviesXmlLocalDataSource (private val sharedPreferences: SharedPreferences, private val serializer:KSerializer): MoviesLocalDataSource{
+class MoviesXmlLocalDataSource(
+    private val sharedPreferences: SharedPreferences, private val serializer: KSerializer
+) : MoviesLocalDataSource {
 
     private val editor: SharedPreferences.Editor = sharedPreferences.edit()
 
@@ -20,7 +22,7 @@ class MoviesXmlLocalDataSource (private val sharedPreferences: SharedPreferences
     }
 
     override fun getMovieById(id: String): Movie {
-        return sharedPreferences.getString(id, null).let{
+        return sharedPreferences.getString(id, null).let {
             serializer.fromJson(it, Movie::class.java)
         }
     }

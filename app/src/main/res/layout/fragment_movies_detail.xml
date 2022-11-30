@@ -19,7 +19,7 @@
 
 
     <TextView
-        android:id="@+id/MovieGenredetail"
+        android:id="@+id/film_genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -30,13 +30,13 @@
         android:layout_marginRight="5dp"/>
 
     <TextView
-        android:id="@+id/film_genre"
+        android:id="@+id/MovieGenredetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textSize="12sp"
         android:layout_marginStart="5dp"
-        app:layout_constraintStart_toEndOf="@id/MovieGenredetail"
+        app:layout_constraintStart_toEndOf="@id/film_genre"
         app:layout_constraintTop_toBottomOf="@+id/MoviePosterdetail"
         tools:text="Action, Adventure, Fantasy, Sci-Fi" />
 
@@ -83,23 +83,23 @@
         tools:text="After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to undo Thanos' actions and restore order to the universe" />
 
     <TextView
-        android:id="@+id/MovieRatingdetail"
+        android:id="@+id/film_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/MoviePlotdetail"
-        tools:text="Rating: " />
+        android:text="Rating: " />
 
     <TextView
-        android:id="@+id/film_rating"
+        android:id="@+id/MovieRatingdetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@id/MovieRatingdetail"
-        app:layout_constraintTop_toBottomOf="@id/MovieRatingdetail"
+        app:layout_constraintStart_toStartOf="@id/film_rating"
+        app:layout_constraintTop_toBottomOf="@id/film_rating"
         tools:text="9,25" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

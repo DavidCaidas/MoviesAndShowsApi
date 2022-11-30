@@ -5,7 +5,7 @@ import com.movies.movies_and_shows_api.data.local.MoviesLocalDataSource
 import com.movies.movies_and_shows_api.domain.Movie
 
 
-class MovieDbLocalDataSource (private val daoMoviesDao: MoviesDao):MoviesLocalDataSource{
+class MovieDbLocalDataSource(private val daoMoviesDao: MoviesDao) : MoviesLocalDataSource {
 
     override fun getAllMovies(): List<Movie> {
         return daoMoviesDao.getAllMovies().map {

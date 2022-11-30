@@ -12,11 +12,7 @@ class GetMoviesFeedUseCase(
         val list = Movies.map { Movie ->
 
             MovieFeed(
-                Movie.id,
-                Movie.title,
-                Movie.genre,
-                Movie.rating,
-                Movie.poster
+                Movie.id, Movie.title, Movie.genre, Movie.rating, Movie.poster
             )
         }
 
@@ -24,10 +20,6 @@ class GetMoviesFeedUseCase(
     }
 
     data class MovieFeed(
-        val id: String,
-        val title: String,
-        val genre: String,
-        val rating: String,
-        val poster: String
+        val id: String, val title: String, val genre: String, val rating: String, val poster: String
     )
 }
