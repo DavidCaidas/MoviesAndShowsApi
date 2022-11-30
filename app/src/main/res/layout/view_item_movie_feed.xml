@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         tools:text="Avengers age of ultron"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
         app:layout_constraintStart_toEndOf="@id/image_item"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -55,7 +55,7 @@
         android:id="@+id/ratinglabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Rating : "
+        android:text="Rating:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/genrelabel"
         app:layout_constraintBottom_toBottomOf="@id/image_item"

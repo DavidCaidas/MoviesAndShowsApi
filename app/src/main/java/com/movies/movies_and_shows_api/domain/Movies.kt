@@ -9,4 +9,3 @@ data class Movie(
     val year: String,
     val poster: String
 )
-

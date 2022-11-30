@@ -16,9 +16,7 @@ import com.movies.movies_and_shows_api.commons.KSerializer
 import com.movies.movies_and_shows_api.presentation.adapter.MovieAdapter
 
 
-
-
-class MovieFeedFragment: Fragment() {
+class MovieFeedFragment : Fragment() {
 
     private var binding: FragmentMoviesFeedBinding? = null
     private val movieAdapter = MovieAdapter()
@@ -38,7 +36,6 @@ class MovieFeedFragment: Fragment() {
     }
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupObservers()
@@ -56,11 +53,10 @@ class MovieFeedFragment: Fragment() {
                         LinearLayoutManager.VERTICAL,
                         false
                     )
-/*
-                MovieAdapter.setItemClick {
-                    navigateToMovieDetail(it)
+                movieAdapter.setItemClick {
+                    navigateToDetail(it)
                 }
-                */
+
             }
 
         }
@@ -75,6 +71,10 @@ class MovieFeedFragment: Fragment() {
     }
 
     private fun navigateToDetail(movieId: String) {
-        findNavController().navigate(MovieFeedFragmentDirections.actionMovieFeedToMovieDetail(movieId))
+        findNavController().navigate(
+            MovieFeedFragmentDirections.actionMovieFeedToMovieDetail(
+                movieId
+            )
+        )
     }
 }
