@@ -16,7 +16,7 @@ class MovieViewHolder(
     fun bind (movie : GetMoviesFeedUseCase.MovieFeed, onClick: ((Int) -> Unit)?) {
         val binding = ViewItemMovieFeedBinding.bind(view)
         binding.filmTitleItem.text = movie.title
-        binding.genrelabel.text = movie.genre
+        binding.genre.text = movie.genre
         binding.rating.text = movie.rating
         binding.imageItem.loadUrl(movie.poster)
         view.setOnClickListener { movie->
