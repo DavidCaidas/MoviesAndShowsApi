@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">movies-and-shows-api</string>
-    <string name="plot_name">plot: </string>
-    <string name="rating_name">rating: </string>
-    <string name="genre_name">genre: </string>
 </resources>
