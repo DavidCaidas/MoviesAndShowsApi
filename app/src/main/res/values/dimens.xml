@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin">16dp</dimen>
+    <dimen name="marginS">10dp</dimen>
+    <dimen name="marginXS">5dp</dimen>
+    <dimen name="marginXL">450dp</dimen>
+    <dimen name="marginXXl">1000dp</dimen>
+    <dimen name="imageScale">100dp</dimen>
+    <dimen name="letterBig">24sp</dimen>
+    <dimen name="letterNormal">16sp</dimen>
+    <dimen name="letterSmall">12sp</dimen>
+
+
+
+
+</resources>
