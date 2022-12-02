@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
     android:background="@color/white"
-    android:padding="16dp">
+    android:padding="@dimen/margin"
+    android:layout_marginBottom="@dimen/margin"
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/image_item"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
+        android:layout_width="@dimen/imageScale"
+        android:layout_height="@dimen/imageScale"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
@@ -21,9 +19,11 @@
         android:id="@+id/film_title_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/image_item"
+        tools:text="Avengers age of ultron"
+        android:textSize="@dimen/letterNormal"
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@id/image_item"
+
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Avengers age of ultron" />
 
@@ -31,29 +31,32 @@
         android:id="@+id/genrelabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Genre : "
-        android:textSize="16sp"
+        android:textSize="@dimen/letterNormal"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@id/film_title_item"
         app:layout_constraintStart_toStartOf="@id/film_title_item"
-        app:layout_constraintTop_toTopOf="@id/film_title_item"
-        app:layout_constraintBottom_toBottomOf="@id/rating"
+        tools:text="@string/genre_name"
         />
 
     <TextView
         android:id="@+id/genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:textSize="16sp"
+        android:textSize="@dimen/letterNormal"
         app:layout_constraintStart_toEndOf="@+id/genrelabel"
         app:layout_constraintTop_toTopOf="@id/genrelabel"
-        tools:text="action" />
+        android:layout_marginStart="@dimen/margin"
+        tools:text="action"
+        />
+
 
     <TextView
         android:id="@+id/ratinglabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rating : "
-        android:textSize="16sp"
+        android:text="@string/rating_name"
+        android:textSize="@dimen/letterNormal"
+        app:layout_constraintStart_toStartOf="@id/genrelabel"
         app:layout_constraintBottom_toBottomOf="@id/image_item"
         app:layout_constraintStart_toStartOf="@id/genrelabel" />
 
@@ -61,8 +64,11 @@
         android:id="@+id/rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:textSize="16sp"
+
+        tools:text="8 / 10"
+        android:textSize="@dimen/letterNormal"
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@id/ratinglabel"
         app:layout_constraintBottom_toBottomOf="@id/ratinglabel"
         app:layout_constraintStart_toEndOf="@id/ratinglabel"
         tools:text="9.25" />

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin"
+    android:background="@color/white"
+    android:padding="@dimen/margin">
+
+    <ImageView
+        android:id="@+id/MoviePosterdetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/marginXL"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/MovieGenredetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginS"
+        android:textSize="@dimen/letterNormal"
+        app:layout_constraintStart_toStartOf="@id/MoviePosterdetail"
+        app:layout_constraintTop_toBottomOf="@+id/MoviePosterdetail"
+        tools:text="@string/genre_name"
+        android:layout_marginEnd="@dimen/marginS"/>
+
+    <TextView
+        android:id="@+id/film_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginS"
+        android:textSize="@dimen/letterNormal"
+        android:layout_marginStart="@dimen/marginXS"
+        app:layout_constraintStart_toEndOf="@id/MovieGenredetail"
+        app:layout_constraintTop_toBottomOf="@+id/MoviePosterdetail"
+        tools:text="Action, Adventure, Fantasy, Sci-Fi" />
+
+    <TextView
+        android:id="@+id/MovieTitledetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginXS"
+        android:layout_marginBottom="@dimen/margin"
+        android:textSize="@dimen/letterBig"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MovieGenredetail"
+        tools:text="Avengers age of ultron" />
+
+    <TextView
+        android:id="@+id/MovieYeardetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginS"
+        android:textSize="@dimen/letterBig"
+        app:layout_constraintStart_toEndOf="@id/MovieTitledetail"
+        app:layout_constraintTop_toTopOf="@id/MovieTitledetail"
+        tools:text="2019"
+
+        />
+
+    <TextView
+        android:id="@+id/plot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginS"
+        android:text="@string/plot_name"
+        android:textSize="@dimen/letterNormal"
+        app:layout_constraintStart_toStartOf="@id/MoviePosterdetail"
+        app:layout_constraintTop_toBottomOf="@id/MovieTitledetail" />
+
+    <TextView
+        android:id="@+id/MoviePlotdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/letterSmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/MoviePosterdetail"
+        app:layout_constraintTop_toBottomOf="@+id/plot"
+        tools:text="After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to undo Thanos' actions and restore order to the universe" />
+
+    <TextView
+        android:id="@+id/MovieRatingdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/letterNormal"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MoviePlotdetail"
+        tools:text="@string/rating_name" />
+
+    <TextView
+        android:id="@+id/film_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/letterBig"
+        app:layout_constraintStart_toStartOf="@id/MovieRatingdetail"
+        app:layout_constraintTop_toBottomOf="@id/MovieRatingdetail"
+        tools:text="9,25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
